@@ -1,0 +1,82 @@
+.App {
+  background-image: url("../assets/main.svg");
+  background-size: cover;
+}
+.logo-container {
+  min-height: 100vh;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.home-img {
+  width: 100%;
+}
+
+/*----------------------------- typing effect --------------------*/
+.name-container {
+  text-align: center;
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid rgb(255, 255, 255); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end 7,
+    remove-border 4s ease 5s infinite;
+  color: white;
+  font-size: 2rem;
+  font-family: cursive;
+}
+.typewriter2 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid rgb(255, 255, 255); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end) 5s, blink-caret 0.75s step-end infinite,
+    opacity 5s ease;
+  color: white;
+  font-size: 2rem;
+  font-family: cursive;
+}
+
+/* The typing effect */
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1%;
+  }
+}
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Remove border right */
+
+@keyframes remove-border {
+  from {
+    border-right: rgb(255, 255, 255);
+  }
+  to {
+    border-right: none;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(255, 255, 255);
+  }
+}

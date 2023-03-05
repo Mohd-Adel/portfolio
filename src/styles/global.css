@@ -1,0 +1,19 @@
+@import url("./main.css");
+@import url("./projects.css");
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .typewriter,
+  .typewriter2 {
+    font-size: 1.8rem;
+    letter-spacing: 0.08rem;
+  }
+  .logo-container {
+    justify-content: space-around;
+    align-items: stretch;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992) {
+}
