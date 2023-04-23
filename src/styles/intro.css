@@ -1,0 +1,82 @@
+.intro {
+  background-color: black;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  overflow: hidden;
+  text-align: center;
+  align-content: space-around;
+  animation: removeIntro 1s ease-in-out 3s forwards;
+  z-index: 9;
+}
+
+.intro-container {
+  position: relative;
+}
+
+.to-move {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateX(-35%);
+  width: 70%;
+}
+.spin {
+  width: 70%;
+  overflow: hidden;
+  position: absolute;
+  animation: spinner 1s linear;
+}
+
+.D {
+  position: absolute;
+  overflow: hidden;
+  width: 70%;
+  left: 45%;
+
+  opacity: 0;
+  animation: showD 1s ease-in-out 1s forwards;
+}
+
+.labtop {
+  position: absolute;
+  width: 70%;
+  left: 60%;
+  top: 0;
+  overflow: hidden;
+  opacity: 0;
+  animation: showD 1s ease-in-out 1s forwards;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes showD {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes removeIntro {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}

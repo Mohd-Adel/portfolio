@@ -1,11 +1,19 @@
 .App {
   background-image: url("../assets/main.svg");
   background-size: cover;
+  background-attachment: fixed;
+  max-width: 100vw;
+  height: 100%;
 }
 .logo-container {
-  min-height: 100vh;
+  height: 100vh;
   text-align: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-content: space-between;
+  /* align-items: center; */
+}
+.hide {
+  opacity: 0;
 }
 
 .home-img {
@@ -22,22 +30,23 @@
   border-right: 0.15em solid rgb(255, 255, 255); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   letter-spacing: 0.15em; /* Adjust as needed */
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end 7,
-    remove-border 4s ease 5s infinite;
+  width: 0px;
+  animation: typing 3.5s steps(40, end) 5s forwards,
+    blink-caret 0.75s step-end 20, remove-border 4s ease 10s infinite;
   color: white;
   font-size: 2rem;
-  font-family: cursive;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 .typewriter2 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid rgb(255, 255, 255); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   letter-spacing: 0.15em; /* Adjust as needed */
-  animation: typing 3.5s steps(40, end) 5s, blink-caret 0.75s step-end infinite,
-    opacity 5s ease;
+  animation: typing 3.5s steps(40, end) 10s, blink-caret 0.75s step-end infinite,
+    opacity 10s ease;
   color: white;
   font-size: 2rem;
-  font-family: cursive;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 /* The typing effect */
@@ -79,4 +88,40 @@
   50% {
     border-color: rgb(255, 255, 255);
   }
+}
+
+/*------------------------------down arrow----------------------*/
+.down-arrow {
+  background-color: rgba(255, 255, 255, 0);
+  height: 20vh;
+}
+
+.down-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.17);
+  transition: background-color ease-in-out 500ms;
+}
+.row {
+  max-height: 100vh;
+}
+
+.down-arrow,
+.up-arrow {
+  font-size: 5rem;
+}
+
+/*------------------------------Section----------------------------*/
+
+.main-container {
+  position: relative;
+  display: flex;
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  flex-flow: column nowrap;
+  height: 100vh;
+}
+
+.section {
+  height: 100%;
+  scroll-snap-align: center;
+  flex: none;
 }

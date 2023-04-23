@@ -1,0 +1,33 @@
+.topnav {
+  background: #00000042;
+  position: sticky;
+}
+
+li.menu-list-item {
+  list-style: none;
+  color: white;
+  margin-left: 20px;
+  font-family: cursive;
+  line-height: 50px;
+  border: none;
+}
+li.menu-list-item a {
+  text-decoration: none;
+  color: #d3d3d3;
+  font-weight: 700;
+}
+
+li.menu-list-item a:hover {
+  color: white;
+  outline: solid 2px white;
+  border-radius: 50%;
+  transition: 500ms border-radius ease-in-out, 1s color ease-in-out;
+}
+
+.menu-list {
+  margin: 0px;
+}
+
+.topnav-logo {
+  width: 80px;
+}
